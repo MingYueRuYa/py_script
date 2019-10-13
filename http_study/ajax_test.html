@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                type:"POST",
+                url:"http://127.0.0.1:8000",
+                success:function (data) {
+                    for(let value of data){
+                        $("table").append("<tr>\n" +
+                            "            <td>"+value.name+"</td>\n" +
+                            "            <td>"+value.teacher+"</td>\n" +
+                            "            <td><a href=\""+value.url+"\">访问</a></td>\n" +
+                            "          </tr>")
+                    }
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div id="info">
+        <p style="color: blue">讲师信息</p>
+        <div class="teacher_info info">
+            C++开发工程师，熟悉对象模型
+            <p class="age">年龄：27</p>
+            <p class="name">姓名：linux</p>
+            <p class="work_years">工作年限：5年</p>
+            <p class="position">职位：C++开发工程师<p>
+        </div>
+        <p style="color: aquamarine">课程信息</p>
+        <table class="courses">
+            <tr>
+                <th>课程名</th>
+                <th>讲师</th>
+                <th>url地址</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

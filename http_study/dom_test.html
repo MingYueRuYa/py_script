@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        $(document).ready(
+            function() {
+                console.log($("#info")[0].nodeName)
+            }
+        )
+    </script>
+</head>
+<body>
+   <div id="info">
+        <p style="color: blue">讲师信息</p>
+        <div class="teacher_info info">
+            熟悉C++开发，设计模式，多线程，对象模型
+            <p class="age">年龄: 29</p>
+            <p class="name">姓名: linux</p>
+            <p class="work_years">工作年限: 5年</p>
+            <p class="position">职位: C++开发工程师</p>
+        </div>
+        <p style="color: aquamarine">课程信息</p>
+        <table class="courses">
+          <tr>
+            <th>课程名</th>
+            <th>讲师</th>
+            <th>地址</th>
+          </tr>
+          <tr>
+            <td>linux系统入门</td>
+            <td>linux</td>
+            <td><a href="http://www.baidu.com">访问</a></td>
+          </tr>
+          <tr>
+            <td>shell编程</td>
+            <td>shell</td>
+            <td><a href="https://www.baidu.com">访问</a></td>
+          </tr>
+        </table>
+    </div>
+</body>
+</html>
